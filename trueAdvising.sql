@@ -39,15 +39,15 @@ USE `trueAdvising`;
 DROP TABLE IF EXISTS `classes`;
 
 CREATE TABLE `classes` (
-  `CRN` VARCHAR(255) NOT NULL, 
-  `class_Number` VARCHAR(255), 
-  `name` VARCHAR(255), 
-  `professor` VARCHAR(255), 
-  `time_start` DATETIME, 
-  `time_End` DATETIME, 
-  `days` VARCHAR(255), 
-  `major_ID` INTEGER, 
-  PRIMARY KEY (`CRN`), 
+  `CRN` VARCHAR(255) NOT NULL,
+  `class_Number` VARCHAR(255),
+  `name` VARCHAR(255),
+  `professor` VARCHAR(255),
+  `time_start` DATETIME,
+  `time_End` DATETIME,
+  `days` VARCHAR(255),
+  `major_ID` INTEGER,
+  PRIMARY KEY (`CRN`),
   INDEX (`major_ID`)
 ) ENGINE=myisam DEFAULT CHARSET=utf8;
 
@@ -120,10 +120,10 @@ INSERT INTO `classes` (`CRN`, `class_Number`, `name`, `professor`, `time_start`,
 DROP TABLE IF EXISTS `enrollments`;
 
 CREATE TABLE `enrollments` (
-  `enrollment_ID` INTEGER NOT NULL, 
-  `CRN` VARCHAR(255), 
-  `student_ID` VARCHAR(255), 
-  PRIMARY KEY (`enrollment_ID`), 
+  `enrollment_ID` INTEGER NOT NULL AUTO_INCREMENT,
+  `CRN` VARCHAR(255),
+  `student_ID` VARCHAR(255),
+  PRIMARY KEY (`enrollment_ID`),
   INDEX (`student_ID`)
 ) ENGINE=myisam DEFAULT CHARSET=utf8;
 
@@ -156,8 +156,8 @@ INSERT INTO `enrollments` (`enrollment_ID`, `CRN`, `student_ID`) VALUES (14, '90
 DROP TABLE IF EXISTS `majors`;
 
 CREATE TABLE `majors` (
-  `major_ID` INTEGER NOT NULL, 
-  `major_Name` VARCHAR(255), 
+  `major_ID` INTEGER NOT NULL AUTO_INCREMENT,
+  `major_Name` VARCHAR(255),
   PRIMARY KEY (`major_ID`)
 ) ENGINE=myisam DEFAULT CHARSET=utf8;
 
@@ -177,13 +177,13 @@ INSERT INTO `majors` (`major_ID`, `major_Name`) VALUES (1, 'BIT_DSS');
 DROP TABLE IF EXISTS `student`;
 
 CREATE TABLE `student` (
-  `student_ID` VARCHAR(255) NOT NULL, 
-  `pid` VARCHAR(255), 
-  `password` VARCHAR(255), 
-  `major_ID` INTEGER, 
-  `year` INTEGER, 
-  INDEX (`major_ID`), 
-  INDEX (`pid`), 
+  `student_ID` VARCHAR(255) NOT NULL,
+  `pid` VARCHAR(255),
+  `password` VARCHAR(255),
+  `major_ID` INTEGER,
+  `year` INTEGER,
+  INDEX (`major_ID`),
+  INDEX (`pid`),
   PRIMARY KEY (`student_ID`)
 ) ENGINE=myisam DEFAULT CHARSET=utf8;
 
@@ -198,4 +198,3 @@ INSERT INTO `student` (`student_ID`, `pid`, `password`, `major_ID`, `year`) VALU
 INSERT INTO `student` (`student_ID`, `pid`, `password`, `major_ID`, `year`) VALUES ('705994519', 'vegetable', 'password', 1, 1);
 INSERT INTO `student` (`student_ID`, `pid`, `password`, `major_ID`, `year`) VALUES ('705997213', 'pickle', 'password', 1, 3);
 # 4 records
-
