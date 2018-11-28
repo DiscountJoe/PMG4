@@ -31,8 +31,8 @@ session_start();
 $sql = "select * from classes";
 $result = $mydb->query($sql);
 echo
-"<table>
-    <tr>
+"<table  style= 'background-color:papayawhip;'>
+    <tr style= 'background-color:darkorange; color:white;'>
       <th>  CRN </th>
       <th>  Class Number  </th>
       <th>  Name </th>

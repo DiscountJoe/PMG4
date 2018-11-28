@@ -31,8 +31,8 @@ $student_ID =  $_SESSION["student_ID"];
 $sql = "select * from enrollments where student_ID = $student_ID";
 $result = $mydb->query($sql);
 echo
-"<table>
-    <tr>
+"<table style= 'background-color:papayawhip;'>
+    <tr style= 'background-color:darkorange; color:white;'>
       <th>  Enrollment ID </th>
       <th>  CRN  </th>
       <th>  student_ID </th>

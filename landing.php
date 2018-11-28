@@ -7,9 +7,9 @@
   <nav>
     <img src="vt.svg" height="15%" width="15%">
     <a href="landing.php">Home</a> |
- <a href="timetable.php">Timetable of Classes</a> |
- <a href="record.php">Your Record</a> |
- <a href="advising.php">Advising</a> |
+ <a href="timetable.php">Course Catalog</a> |
+ <a href="record.php">Registration Record</a> |
+ <a href="advising.php">Prepare for Registration</a> |
 </nav>
   <?php
     //resume the session variable on this page

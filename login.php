@@ -5,6 +5,7 @@
   $error = false;
   $loginOK = null;
   $student_ID = "";
+  $major_ID = "";
 
   if(isset($_POST["submit"])){
     if(isset($_POST["pid"])) $pid=$_POST["pid"];
@@ -25,7 +26,7 @@
     if(!$error){
       //check pid and password with the database record
       require_once("db.php");
-      $sql = "select password, student_ID from student where pid='$pid'";
+      $sql = "select password, student_ID, major_ID from student where pid='$pid'";
       $result = $mydb->query($sql);
 
       $row=mysqli_fetch_array($result);
@@ -42,6 +43,7 @@
         session_start();
         $_SESSION["pid"] = $pid;
         $_SESSION["student_ID"] = $row["student_ID"];
+        $_SESSION["major_ID"] = $row["major_ID"];
         setcookie("password", $password, time()+86400*3);
 
         Header("Location:landing.php");
