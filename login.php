@@ -24,7 +24,7 @@
     if(!$error){
       //check pid and password with the database record
       require_once("db.php");
-      $sql = "select password from students where pid='$pid'";
+      $sql = "select password from student where pid='$pid'";
       $result = $mydb->query($sql);
 
       $row=mysqli_fetch_array($result);
