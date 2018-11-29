@@ -9,9 +9,9 @@
 
     <img src="vt.svg" height="15%" width="15%">
     <a href="landing.php">Home</a> |
-    <a href="timetable.php">Timetable of Classes</a> |
-    <a href="record.php">Your Record</a> |
-    <a href="advising.php">Advising</a>
+    <a href="timetable.php">Course Catalog</a> |
+    <a href="record.php">Registration Record</a> |
+    <a href="advising.php">Prepare for Registration</a>
   </br>
 </br>
 
@@ -31,7 +31,7 @@ $student_ID =  $_SESSION["student_ID"];
 $sql = "select * from enrollments where student_ID = $student_ID";
 $result = $mydb->query($sql);
 echo
-"<table>
+"<table align='center'>
     <tr>
       <th>  Enrollment ID </th>
       <th>  CRN  </th>

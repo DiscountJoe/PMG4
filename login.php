@@ -44,7 +44,13 @@
         $_SESSION["pid"] = $pid;
         $_SESSION["student_ID"] = $row["student_ID"];
         $_SESSION["major_ID"] = $row["major_ID"];
+        $major_ID = $_SESSION["major_ID"];
         setcookie("password", $password, time()+86400*3);
+
+        $sql2 = "select major_Name from majors where major_ID =$major_ID";
+        $result2 = $mydb->query($sql2);
+        $row2=mysqli_fetch_array($result2);
+        $_SESSION["major_Name"] = $row2["major_Name"];
 
         Header("Location:landing.php");
       }

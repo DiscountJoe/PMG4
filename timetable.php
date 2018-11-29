@@ -9,9 +9,9 @@
 
     <img src="vt.svg" height="15%" width="15%">
     <a href="landing.php">Home</a> |
-    <a href="timetable.php">Timetable of Classes</a> |
-    <a href="record.php">Your Record</a> |
-    <a href="advising.php">Advising</a>
+    <a href="timetable.php">Course Catalog</a> |
+    <a href="record.php">Registration Record</a> |
+    <a href="advising.php">Prepare for Registration</a>
   </br>
 </br>
 
@@ -27,11 +27,11 @@ session_start();
 
 //$clientName=$_SESSION['clientName'];
 //$clientID=$_SESSION['clientID'];
-
+echo "Here are the required classes for ".$_SESSION["major_Name"].".</br></br>";
 $sql = "select * from classes";
 $result = $mydb->query($sql);
 echo
-"<table  style= 'background-color:papayawhip;'>
+"<table  align = 'center' style= 'background-color:papayawhip;'>
     <tr style= 'background-color:darkorange; color:white;'>
       <th>  CRN </th>
       <th>  Class Number  </th>
