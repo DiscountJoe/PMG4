@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Pamplin Advising Tool</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
 <body>
   <nav>
@@ -9,8 +10,11 @@
     <a href="landing.php">Home</a> |
  <a href="timetable.php">Course Catalog</a> |
  <a href="record.php">Registration Record</a> |
- <a href="advising.php">Prepare for Registration</a> |
+ <a href="advising.php">Registration</a> |
 </nav>
+</br>
+
+<img src="pamplin.jpg"/>
   <?php
     //resume the session variable on this page
     session_start();

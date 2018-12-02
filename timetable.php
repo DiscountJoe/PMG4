@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Pamplin Advising Tool</title>
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
 
 <body>
@@ -11,11 +12,10 @@
     <a href="landing.php">Home</a> |
     <a href="timetable.php">Course Catalog</a> |
     <a href="record.php">Registration Record</a> |
-    <a href="advising.php">Prepare for Registration</a>
-  </br>
-</br>
-
+    <a href="advising.php">Registration</a>
 </nav>
+</br>
+</br>
 
 </body>
 
@@ -28,11 +28,13 @@ session_start();
 //$clientName=$_SESSION['clientName'];
 //$clientID=$_SESSION['clientID'];
 echo "Here are the required classes for ".$_SESSION["major_Name"].".</br></br>";
-$sql = "select * from classes";
+
+$sql = "select * from classes order by class_Number asc";
 $result = $mydb->query($sql);
+
 echo
 "<table  align = 'center' style= 'background-color:papayawhip;'>
-    <tr style= 'background-color:darkorange; color:white;'>
+    <tr style= 'background-color:#cc6600; color:white;'>
       <th>  CRN </th>
       <th>  Class Number  </th>
       <th>  Name </th>
@@ -41,7 +43,6 @@ echo
       <th>  Time End  </th>
       <th>  Days </th>
       <th>  Major ID </th>
-
     </tr>";
 
   while($row = mysqli_fetch_array($result)) {

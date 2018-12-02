@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Pamplin Advising Tool</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
 
 <body>
@@ -12,10 +13,10 @@
     <a href="timetable.php">Timetable of Classes</a> |
     <a href="record.php">Your Record</a> |
     <a href="advising.php">Advising</a>
-  </br>
-</br>
 
 </nav>
+</br>
+</br>
 
 </body>
 

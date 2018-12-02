@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Log out page</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
 <body>
   <img src="vt.svg" height="15%" width="15%">

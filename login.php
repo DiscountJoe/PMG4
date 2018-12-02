@@ -62,6 +62,7 @@
 <html>
 <head>
   <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
   <style>
     .errlabel {color:red};
   </style>
